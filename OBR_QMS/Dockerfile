@@ -1,7 +1,8 @@
 FROM php:8.2-apache
 
-COPY OBR_QMS/ /var/www/html/
+# Install mysqli extension
+RUN docker-php-ext-install mysqli
 
-WORKDIR /var/www/html/admin
+COPY OBR_QMS/ /var/www/html/
 
 EXPOSE 80
