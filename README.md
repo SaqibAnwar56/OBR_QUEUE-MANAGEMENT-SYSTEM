@@ -1,1077 +1,239 @@
-<div align="center">
+div align="center">
 
 📋 OBR Queue Management System
 
 OBR QMS — Digital Queue & Customer Management Platform
 
-<p>
-  <strong>A PHP & MySQL based web application for modern, organized and efficient queue management.</strong>
-</p>
-
-<p>
-  <a href="https://obr-queue-management.infinityfreeapp.com/OBR_QMS/customer/index.php">
-    <img src="https://img.shields.io/badge/🌐%20Customer%20Portal-LIVE-16a085?style=for-the-badge" alt="Customer Portal">
-  </a>
-  <a href="https://obr-queue-management.infinityfreeapp.com/OBR_QMS/admin/login.php">
-    <img src="https://img.shields.io/badge/🔐%20Admin%20Portal-LIVE-c8a96e?style=for-the-badge" alt="Admin Portal">
-  </a>
-</p>
-
-<br>
-
-
-
-
-
-
-
-
-<br>
-
-
-
-
-
-
-
+<img src="https://img.shields.io/badge/PHP-8.x-777BB4?style=for-the-badge&logo=php&logoColor=white">
+<img src="https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+<img src="https://img.shields.io/badge/HTML5-Frontend-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+<img src="https://img.shields.io/badge/CSS3-Styling-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+<img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+<img src="https://img.shields.io/badge/Hosting-InfinityFree-0A66C2?style=for-the-badge">
+### 🌐 [Customer Portal](https://obr-queue-management.infinityfreeapp.com/OBR_QMS/customer/index.php)
+### 🔐 [Admin Portal](https://obr-queue-management.infinityfreeapp.com/OBR_QMS/admin/login.php)
+**Developed by Saqib Anwar**
 </div>
+---
 
-📖 Table of Contents
+📌 About
 
-🎯 Project Overview
+OBR Queue Management System (OBR QMS) is a PHP/MySQL web application for
+digital queue management, customer interaction, feedback collection, and
+administrative monitoring.
+The system is divided into two interfaces:
 
-💡 Problem Statement
-
-🎯 Project Objectives
-
-✨ Key Features
-
-🌐 Live Portals
-
-🏗️ System Architecture
-
-🔄 Application Flow
-
-👥 User Roles
-
-🌐 Customer Portal
-
-🔐 Admin Portal
-
-🗄️ Database Layer
-
-🔌 Backend Architecture
-
-🎨 Frontend Architecture
-
-📁 Project Structure
-
-🧩 Core Modules
-
-🔑 Authentication
-
-💬 Feedback Management
-
-🔁 CRUD Operations
-
-🛡️ Security
-
-📱 Responsive Design
-
-🛠️ Technology Stack
-
-💻 Development Environment
-
-🚀 Local Setup
-
-🗃️ Database Setup
-
-⚙️ Configuration
-
-☁️ Deployment
-
-🌍 Production Configuration
-
-🧪 Testing
-
-🐛 Troubleshooting
-
-🔒 Deployment Security
-
-📊 System Benefits
-
-📈 Future Enhancements
-
-👨‍💻 Development Workflow
-
-📚 Learning Outcomes
-
-📌 Project Status
-
-👨‍💻 Developer
-
-📄 License
-
-🎯 Project Overview
-
-OBR Queue Management System (OBR QMS) is a web-based queue
-management application developed to organize customer interaction,
-queue-related operations, administrative monitoring, and customer
-feedback through a centralized digital platform.
-
-The system is divided into two major areas:
-
-Area
+Portal
 
 Purpose
 
-🌐 Customer Portal
+🌐 Customer
 
-Public-facing customer interface
+Queue-related operations and feedback
 
-🔐 Admin Portal
+🔐 Admin
 
-Protected administrative interface
+Authentication, dashboard and record management
 
-🗄️ MySQL Database
+🎯 Objectives
 
-Centralized application data storage
+Digitalize manual queue handling.
 
-⚙️ PHP Backend
+Provide a simple customer interface.
 
-Server-side processing and database communication
+Centralize records in MySQL.
 
-🎨 HTML/CSS/JS
+Provide protected administration.
 
-User interface and client-side interaction
+Collect and manage customer feedback.
 
-The project is designed around a simple client-server architecture
-where users interact with the browser, PHP processes requests on the
-server, and MySQL stores persistent application data.
+Deploy a practical, responsive web application.
 
-💡 Problem Statement
+✨ Features
 
-Traditional queue handling can become difficult when customer
-information and queue operations are handled manually.
+🌐 Customer
 
-Common problems include:
+Customer-facing website.
 
-Manual queue handling
+Queue-related operations.
 
-Poor visibility of customer information
+Feedback submission.
 
-Difficulty monitoring customer activity
+Database-connected forms.
 
-Difficult feedback management
+Responsive interface.
 
-Repetitive administrative work
+Server-side PHP processing.
 
-Lack of centralized records
+🔐 Admin
 
-Limited accessibility
+Secure admin login.
 
-Increased possibility of human error
+Session-based authentication.
 
-OBR QMS addresses these problems by providing a centralized
-web-based platform.
+Protected dashboard.
 
-🎯 Project Objectives
+Customer feedback management.
 
-The major objectives of OBR QMS are:
+Feedback deletion.
 
-Digitize queue-related operations.
+Database-driven records.
 
-Provide a dedicated customer portal.
+Logout functionality.
 
-Provide a secure administrator portal.
+🏗️ Architecture
 
-Store application information in MySQL.
+                    USERS
+                      │
+          ┌───────────┴───────────┐
+          ▼                       ▼
+   CUSTOMER PORTAL           ADMIN PORTAL
+    /customer/                 /admin/
+          │                       │
+          └───────────┬───────────┘
+                      ▼
+                 PHP BACKEND
+                      │
+                      ▼
+                 MySQL DATABASE
 
-Improve organization of customer records.
+Application Layers
 
-Provide customer feedback functionality.
+HTML + CSS + JavaScript
+          ↓
+          PHP
+          ↓
+        MySQL
 
-Allow administrators to monitor submitted information.
+Customer Flow
 
-Reduce dependency on manual record handling.
+Customer → Website → PHP → MySQL → Result
 
-Separate public and administrative functionality.
+Admin Flow
 
-Provide a responsive web interface.
-
-Make the application accessible online.
-
-Build an architecture that can be extended in the future.
-
-✨ Key Features
-
-🌐 Customer Features
-
-Public customer interface
-
-Queue-related customer interaction
-
-Customer-facing forms
-
-Feedback submission
-
-Responsive interface
-
-Server-side processing
-
-MySQL-backed data storage
-
-🔐 Administrator Features
-
-Secure admin login
-
-Session-based authentication
-
-Protected dashboard
-
-Database-driven information
-
-Customer feedback viewing
-
-Feedback deletion
-
-Logout functionality
-
-Administrative monitoring
-
-🗄️ Database Features
-
-Centralized MySQL database
-
-Administrator records
-
-Customer feedback records
-
-Timestamped records
-
-PHP MySQLi connectivity
-
-CRUD operations
-
-🎨 UI Features
-
-Modern dark interface
-
-Premium gold accent styling
-
-Responsive layouts
-
-Structured tables
-
-Interactive buttons
-
-Form validation
-
-Clear navigation
-
-🌐 Live Portals
+Admin → Login → admins Table → Session → Dashboard
+                                      ↓
+                              Manage Records
 
 🌐 Customer Portal
 
+The customer portal is the public-facing part of OBR QMS.
 Live URL:
-
 https://obr-queue-management.infinityfreeapp.com/OBR_QMS/customer/index.php
+Typical flow:
 
-Use this portal for customer-facing functionality.
+Customer
+   ↓
+Customer Interface
+   ↓
+Form / Queue Operation
+   ↓
+PHP Processing
+   ↓
+MySQL
 
 🔐 Admin Portal
 
+The admin portal is protected using PHP sessions.
 Live URL:
-
 https://obr-queue-management.infinityfreeapp.com/OBR_QMS/admin/login.php
 
-Use this portal for administrator authentication and management.
+Authentication Flow
 
-🏗️ System Architecture
-
-The overall architecture can be represented as:
-
-                              ┌─────────────────────┐
-                              │        USERS        │
-                              └──────────┬──────────┘
-                                         │
-                         ┌───────────────┴───────────────┐
-                         │                               │
-                         ▼                               ▼
-                ┌────────────────┐              ┌────────────────┐
-                │ CUSTOMER       │              │ ADMIN          │
-                │ PORTAL         │              │ PORTAL         │
-                └───────┬────────┘              └───────┬────────┘
-                        │                               │
-                        └──────────────┬────────────────┘
-                                       │
-                                       ▼
-                              ┌─────────────────┐
-                              │   PHP BACKEND   │
-                              └────────┬────────┘
-                                       │
-                                       ▼
-                              ┌─────────────────┐
-                              │  MySQL DATABASE │
-                              └─────────────────┘
-
-🔄 Application Flow
-
-The general request flow is:
-
-Browser
-   │
-   ▼
-PHP Page
-   │
-   ▼
-Request Processing
-   │
-   ├───────────────┐
-   │               │
-   ▼               ▼
-Session          Database
-Validation       Query
-   │               │
-   └───────┬───────┘
-           │
-           ▼
-      HTML Response
-           │
-           ▼
-         Browser
-
-👥 User Roles
-
-The application currently separates users into two main roles.
-
-👤 Customer
-
-The customer uses the public portal.
-
-Customer responsibilities include:
-
-Accessing the customer website
-
-Performing available customer operations
-
-Providing feedback
-
-Interacting with customer-facing forms
-
-👨‍💼 Administrator
-
-The administrator uses the protected admin portal.
-
-Administrator responsibilities include:
-
-Logging into the system
-
-Accessing the dashboard
-
-Monitoring records
-
-Viewing customer feedback
-
-Deleting feedback where appropriate
-
-Logging out securely
-
-🌐 Customer Portal
-
-The customer portal is located inside:
-
-OBR_QMS/customer/
-
-Its primary entry point is:
-
-customer/index.php
-
-The customer interface is designed to be directly accessible from
-the public website without exposing administrative functionality.
-
-Customer URL
-
-https://obr-queue-management.infinityfreeapp.com/OBR_QMS/customer/index.php
-
-🔐 Admin Portal
-
-The administrator portal is located inside:
-
-OBR_QMS/admin/
-
-Its primary entry point is:
-
-admin/login.php
-
-The administrator section is protected using PHP sessions.
-
-The normal flow is:
-
-admin/login.php
-       │
-       ▼
-Authentication
-       │
-       ▼
-Session Creation
-       │
-       ▼
+Username + Password
+        ↓
+PHP Validation
+        ↓
+admins Table
+        ↓
+password_verify()
+        ↓
+PHP Session
+        ↓
 dashboard.php
-       │
-       ├── Feedback
-       ├── Management
-       └── Other Admin Functions
 
-🗄️ Database Layer
-
-OBR QMS uses MySQL as its relational database.
-
-The application communicates with MySQL through PHP's
-MySQLi extension.
-
-The production database is hosted remotely.
-
-Production Database Configuration
-
-Setting
-
-Value
-
-Database Host
-
-sql202.infinityfree.com
-
-Port
-
-3306
-
-Database
-
-if0_42666309_obr_qms
-
-Driver
-
-MySQLi
-
-Character Set
-
-UTF-8 / utf8mb4
-
-⚠️ Never expose the actual production database password in a
-public README, GitHub repository, screenshot, or source listing.
-
-🔌 Backend Architecture
-
-The backend is written in PHP.
-
-PHP is responsible for:
-
-Receiving HTTP requests
-
-Processing form submissions
-
-Starting sessions
-
-Authenticating administrators
-
-Communicating with MySQL
-
-Executing SQL queries
-
-Retrieving records
-
-Inserting records
-
-Deleting records
-
-Redirecting users
-
-Generating dynamic HTML
-
-A typical backend request follows:
-
-HTTP Request
-     │
-     ▼
-PHP Script
-     │
-     ├── Validate Input
-     │
-     ├── Check Session
-     │
-     ├── Execute Database Query
-     │
-     ├── Process Result
-     │
-     └── Generate Response
-             │
-             ▼
-          Browser
-
-🎨 Frontend Architecture
-
-The frontend uses:
-
-HTML5
-
-CSS3
-
-Vanilla JavaScript
-
-HTML provides structure.
-
-CSS provides:
-
-Layout
-
-Colors
-
-Typography
-
-Responsive behavior
-
-Buttons
-
-Forms
-
-Tables
-
-Animations
-
-JavaScript can provide:
-
-Client-side interaction
-
-Dynamic UI behavior
-
-Form interaction
-
-Confirmation dialogs
-
-Navigation behavior
-
-The project does not require a frontend framework for its core
-interface.
-
-📁 Project Structure
-
-A simplified project structure is:
-
-OBR_QMS/
-│
-├── customer/
-│   │
-│   ├── index.php
-│   ├── db.php
-│   ├── test_db.php
-│   │
-│   ├── css/
-│   ├── js/
-│   ├── images/
-│   └── assets/
-│
-├── admin/
-│   │
-│   ├── login.php
-│   ├── dashboard.php
-│   ├── feedback.php
-│   ├── view_feedback.php
-│   ├── db.php
-│   │
-│   ├── css/
-│   ├── js/
-│   └── assets/
-│
-├── database/
-│   └── obr_qms.sql
-│
-└── README.md
-
-The exact contents of folders can grow as additional modules are
-added to the project.
-
-🧩 Core Modules
-
-Module 1 — Customer Interface
-
-Responsible for customer-facing functionality.
-
-customer/
-
-Module 2 — Customer Database Connection
-
-Responsible for connecting customer-side PHP files to MySQL.
-
-customer/db.php
-
-Module 3 — Administrator Authentication
-
-Responsible for:
-
-Login form
-
-Credential verification
-
-Session creation
-
-Authentication errors
-
-Redirecting authenticated users
-
-admin/login.php
-
-Module 4 — Admin Database Connection
-
-Responsible for connecting administrator PHP pages to MySQL.
-
-admin/db.php
-
-Module 5 — Admin Dashboard
-
-Responsible for providing the administrator's central management
-interface.
-
-admin/dashboard.php
-
-Module 6 — Feedback Management
-
-Responsible for displaying customer feedback and allowing
-administrators to manage feedback records.
-
-admin/feedback.php
-admin/view_feedback.php
-
-🔑 Authentication
-
-The admin portal uses PHP sessions.
-
-After successful authentication, the application stores information
-such as:
-
-$_SESSION['admin_id']
-$_SESSION['admin_username']
-
-Protected pages verify the session before displaying sensitive
-content.
-
-Example:
+Example protection:
 
 session_start();
-
 if (!isset($_SESSION['admin_id'])) {
     header("Location: login.php");
     exit();
 }
 
-This prevents a user from directly opening protected admin pages
-without first authenticating.
+🗄️ Database
 
-🔐 Password Verification
+The deployed application uses a MySQL database:
 
-Administrator passwords should be stored as secure hashes.
+if0_42666309_obr_qms
 
-Password creation:
+Main project tables include:
 
-$passwordHash = password_hash(
-    $password,
-    PASSWORD_DEFAULT
-);
+OBR_QMS
+ ├── admins
+ └── customer_feedback
 
-Password verification:
+Feedback Data
 
-if (password_verify($password, $row['password'])) {
-    // Authentication successful
-}
+The feedback module can store:
 
-This is preferable to storing administrator passwords as plain text.
-
-💬 Feedback Management
-
-The feedback system stores customer-submitted information.
-
-The feedback table can contain fields such as:
-
-Field
-
-Purpose
-
-id
-
-Unique feedback identifier
-
-name
+ID
 
 Customer name
 
-email
-
-Customer email
-
-feedback_type
-
-Feedback category
-
-message
-
-Customer feedback
-
-created_at
-
-Submission date/time
-
-The administrator can view feedback through the admin interface.
-
-🗑️ Feedback Deletion
-
-The feedback management page supports deletion of feedback records.
-
-Typical flow:
-
-Admin
-  │
-  ▼
-Feedback Page
-  │
-  ▼
-Select Feedback
-  │
-  ▼
-Delete / Discard
-  │
-  ▼
-MySQL DELETE Query
-  │
-  ▼
-Updated Feedback List
-
-A confirmation dialog should be displayed before destructive actions.
-
-🔁 CRUD Operations
-
-The project follows the standard CRUD concept.
-
-CREATE
-
-Creates a new record.
-
-Example:
-
-Customer submits feedback
-        ↓
-PHP receives form data
-        ↓
-INSERT into customer_feedback
-
-READ
-
-Reads records from MySQL.
-
-Example:
-
-Admin opens feedback page
-        ↓
-SELECT feedback records
-        ↓
-Display records in table
-
-UPDATE
-
-Modifies an existing record where the relevant module supports
-editing.
-
-DELETE
-
-Removes an existing record.
-
-Example:
-
-Admin selects Discard
-        ↓
-DELETE FROM customer_feedback
-        ↓
-Refresh feedback page
-
-🛡️ Security
-
-Security is an important part of the system.
-
-Implemented or recommended practices include:
-
-Session-based admin protection
-
-Password hashing
-
-Password verification
-
-Input validation
-
-Output escaping
-
-Prepared statements
-
-Database access through server-side PHP
-
-Separation of customer and admin areas
-
-Example output escaping:
-
-htmlspecialchars($row['message'])
-
-Example prepared statement:
-
-$stmt = $conn->prepare(
-    "SELECT id, password
-     FROM admins
-     WHERE username = ?"
-);
-
-$stmt->bind_param("s", $username);
-
-🚨 Important Security Rule
-
-Do not commit production credentials.
-
-Never put values such as:
-
-MySQL password
-Hosting password
-FTP password
-Control-panel password
-API secret
-Private key
-
-inside a public GitHub repository.
-
-For production, credentials should be stored privately in the hosting
-environment or a protected configuration file.
-
-📱 Responsive Design
-
-OBR QMS is intended to work across common screen sizes.
-
-Supported targets include:
-
-┌──────────────────────┐
-│      Desktop         │
-└──────────────────────┘
-
-┌───────────────┐
-│    Tablet     │
-└───────────────┘
-
-┌─────────┐
-│ Mobile  │
-└─────────┘
-
-Responsive design focuses on:
-
-Flexible layouts
-
-Responsive forms
-
-Responsive tables
-
-Mobile-friendly spacing
-
-Readable typography
-
-Accessible buttons
-
-Adaptive navigation
-
-🛠️ Technology Stack
-
-Layer
-
-Technology
-
-Frontend Markup
-
-HTML5
-
-Styling
-
-CSS3
-
-Client-side Logic
-
-JavaScript
-
-Backend
-
-PHP
-
-Database
-
-MySQL
-
-Database Driver
-
-MySQLi
-
-Authentication
-
-PHP Sessions
-
-Web Server
-
-Apache
-
-Local Environment
-
-XAMPP
-
-Database Administration
-
-phpMyAdmin
-
-Production Hosting
-
-InfinityFree
-
-Development Editor
-
-VS Code
-
-💻 Development Environment
-
-Recommended development environment:
-
-Windows
-
-XAMPP
-
-Apache
-
-MySQL
-
-PHP
-
-phpMyAdmin
-
-Visual Studio Code
-
-Modern web browser
-
-The project can be developed locally before being uploaded to
-production hosting.
-
-🚀 Local Setup
-
-Step 1 — Install XAMPP
-
-Install XAMPP with:
-
-Apache
-MySQL
-PHP
-phpMyAdmin
-
-Step 2 — Copy the Project
-
-Place the project inside:
-
-C:\xampp\htdocs\OBR_QMS\
-
-Step 3 — Start Services
-
-Open XAMPP Control Panel.
-
-Start:
-
-Apache
-MySQL
-
-Step 4 — Open phpMyAdmin
-
-Visit:
-
-http://localhost/phpmyadmin
-
-Step 5 — Create Database
-
-Create:
-
-obr_qms
-
-Step 6 — Import SQL
-
-Import the project database SQL file:
-
-database/obr_qms.sql
-
-Step 7 — Configure Local Database
-
-For XAMPP, a typical local configuration is:
+Email
+
+Feedback type
+
+Message
+
+Created date/time
+
+Feedback Flow
+
+Customer
+   ↓
+Feedback Form
+   ↓
+feedback.php
+   ↓
+customer_feedback
+   ↓
+Admin Dashboard
+   ↓
+view_feedback.php
+
+📁 Project Structure
+
+OBR_QMS/
+│
+├── customer/
+│   ├── index.php
+│   ├── db.php
+│   ├── feedback.php
+│   ├── test_db.php
+│   └── assets/
+│
+├── admin/
+│   ├── login.php
+│   ├── db.php
+│   ├── dashboard.php
+│   ├── view_feedback.php
+│   └── other admin pages
+│
+└── README.md
+
+⚠️ Hosting is case-sensitive. Keep file and folder names exactly consistent.
+
+🔌 Database Connection
+
+Hosted PHP files use the InfinityFree MySQL server.
 
 <?php
-
-$host = "localhost";
-$user = "root";
-$password = "";
-$database = "obr_qms";
-
-$conn = new mysqli(
-    $host,
-    $user,
-    $password,
-    $database
-);
-
-if ($conn->connect_error) {
-    die("Database connection failed: " . $conn->connect_error);
-}
-
-$conn->set_charset("utf8mb4");
-
-?>
-
-🌐 Local Customer URL
-
-After Apache is running:
-
-http://localhost/OBR_QMS/customer/index.php
-
-🔐 Local Admin URL
-
-http://localhost/OBR_QMS/admin/login.php
-
-🗃️ Database Setup
-
-The database should be imported before testing PHP pages that require
-database access.
-
-General process:
-
-SQL File
-   │
-   ▼
-phpMyAdmin
-   │
-   ▼
-MySQL Database
-   │
-   ▼
-PHP db.php
-   │
-   ▼
-Application
-
-⚙️ Configuration
-
-The production database connection is configured through db.php.
-
-The structure is:
-
 $host = "sql202.infinityfree.com";
 $port = 3306;
-$user = "DATABASE_USERNAME";
-$password = "DATABASE_PASSWORD";
+$user = "YOUR_MYSQL_USERNAME";
+$password = "YOUR_MYSQL_PASSWORD";
 $database = "if0_42666309_obr_qms";
-
-Then:
-
 $conn = new mysqli(
     $host,
     $user,
@@ -1079,716 +241,361 @@ $conn = new mysqli(
     $database,
     $port
 );
-
-Finally:
-
+if ($conn->connect_error) {
+    die("Database connection failed: " . $conn->connect_error);
+}
 $conn->set_charset("utf8mb4");
+?>
+
+🔒 Never publish your real database password in GitHub.
+
+🛡️ Security
+
+The application uses basic web security practices:
+
+PHP sessions for admin authentication.
+
+Protected admin pages.
+
+Password hashing and password_verify().
+
+Prepared statements for login queries.
+
+htmlspecialchars() for displayed user data.
+
+Server-side validation.
+
+Separate customer/admin areas.
+Example:
+
+if (password_verify($password, $row['password'])) {
+    $_SESSION['admin_id'] = $row['id'];
+}
+
+🎨 UI / UX
+
+The system focuses on:
+
+Professional visual design.
+
+Clear navigation.
+
+Responsive layouts.
+
+Consistent typography.
+
+Accessible forms.
+
+Customer-friendly pages.
+
+Premium dark/gold admin interface.
+
+Clear error and action messages.
+Responsive target:
+
+📱 Mobile → 📲 Tablet → 💻 Laptop → 🖥️ Desktop
+
+🛠️ Technology Stack
+
+Technology
+
+Role
+
+PHP
+
+Backend / server-side logic
+
+MySQL
+
+Persistent database
+
+HTML5
+
+Page structure
+
+CSS3
+
+Styling / responsive UI
+
+JavaScript
+
+Client-side interaction
+
+Apache
+
+Web server
+
+phpMyAdmin
+
+Database administration
+
+InfinityFree
+
+Hosting
+
+💻 Local Development
+
+Requirements
+
+XAMPP
+
+Apache
+
+MySQL
+
+PHP
+
+Web browser
+
+Code editor
+
+Setup
+
+1. Install XAMPP.
+2. Start Apache and MySQL.
+3. Copy OBR_QMS into htdocs.
+4. Create/import the MySQL database.
+5. Configure db.php.
+6. Open the customer portal.
+7. Test the admin portal.
+
+Local URLs
+
+Customer:
+http://localhost/OBR_QMS/customer/index.php
+Admin:
+http://localhost/OBR_QMS/admin/login.php
 
 ☁️ Deployment
 
-The application is currently deployed on InfinityFree.
+The current project is deployed on InfinityFree.
 
-The production structure is approximately:
+Local Project
+     ↓
+Project Files
+     ↓
+InfinityFree File Manager
+     ↓
+htdocs/OBR_QMS/
+     ↓
+MySQL Database
+     ↓
+Live PHP Application
+
+Hosted Structure
 
 htdocs/
-│
 └── OBR_QMS/
-    │
     ├── customer/
-    │
     └── admin/
 
-The public domain points to the hosting account.
+Database Deployment
 
-🌍 Production Configuration
+Create the MySQL database from the hosting panel.
 
-Production database settings use the hosting provider's MySQL
-credentials.
+Select the assigned database in phpMyAdmin.
 
-Production host:
+Import the SQL tables.
 
-sql202.infinityfree.com
+Do not run CREATE DATABASE when the host has already created it.
 
-Production port:
+Update customer and admin db.php.
 
-3306
+Test the connection.
 
-Production database:
+Test both live portals.
 
-if0_42666309_obr_qms
+🧪 Testing Checklist
 
-The local development configuration should not be blindly copied to
-production.
+Customer
 
-For example, production should not normally use:
-
-localhost
-root
-empty password
-
-📤 Deployment Steps
-
-The deployment process is:
-
-1. Develop locally
-        ↓
-2. Test locally
-        ↓
-3. Create hosting account
-        ↓
-4. Create MySQL database
-        ↓
-5. Upload project
-        ↓
-6. Upload OBR_QMS folder
-        ↓
-7. Import SQL database
-        ↓
-8. Update db.php
-        ↓
-9. Test PHP
-        ↓
-10. Test Customer Portal
-        ↓
-11. Test Admin Portal
-        ↓
-12. Test database operations
-        ↓
-13. Go Live
-
-🧪 Testing
-
-Testing should be performed on both portals.
-
-Customer Testing
-
-Check:
-
-Homepage loads.
+Homepage opens.
 
 Customer pages load.
 
 Forms work.
 
-Database-connected features work.
+Feedback submits.
 
-Feedback submission works.
-
-Data is stored correctly.
+Database records are created.
 
 Mobile layout works.
 
-Desktop layout works.
+Admin
 
-🔐 Admin Testing
+Login opens.
 
-Check:
+Valid credentials work.
 
-Login page loads.
+Invalid credentials show an error.
 
-Correct credentials work.
+Dashboard opens.
 
-Incorrect credentials are rejected.
+Protected pages require login.
 
-Empty fields are rejected.
+Feedback appears.
 
-Session is created.
-
-Dashboard opens after authentication.
-
-Protected pages reject unauthenticated access.
-
-Feedback page loads.
-
-Feedback records display.
-
-Delete action works.
+Feedback deletion works.
 
 Logout works.
 
-🗄️ Database Testing
+Database
 
-Check:
+Correct hostname.
 
-Database exists.
+Correct username.
 
-Tables exist.
+Correct password.
+
+Correct database name.
+
+Required tables exist.
 
 PHP connects successfully.
 
-INSERT operations work.
-
-SELECT operations work.
-
-DELETE operations work.
-
-Timestamps are generated correctly.
-
-Data appears in phpMyAdmin.
-
 🐛 Troubleshooting
 
-Problem: 404 Error
-
-Possible reasons:
-
-Wrong URL
-
-Wrong filename
-
-Wrong folder name
-
-Incorrect capitalization
-
-File uploaded to the wrong directory
-
-Project not inside the correct hosting directory
-
-Remember that hosting paths can be case-sensitive.
-
-For example:
-
-OBR_QMS
-
-and:
-
-obr_qms
-
-may be treated as different paths.
-
-🐛 Database Connection Error
-
-If you see a database connection error, check:
-
-Host
-Username
-Password
-Database name
-Port
-
-For production, use the MySQL credentials provided by the hosting
-provider.
-
-Do not use the local XAMPP configuration on the live server.
-
-🐛 "No Such File or Directory" MySQL Error
-
-A common cause is using:
-
-localhost
-
-when the production database is hosted remotely.
-
-The production configuration should use the hosting MySQL hostname:
-
-sql202.infinityfree.com
-
-🐛 Admin Login Not Working
-
-Check the following:
-
-1. admins table exists
-2. Username exists
-3. Password is stored as a hash
-4. db.php uses production credentials
-5. PHP session is enabled
-6. login.php includes db.php
-7. dashboard.php checks the session
-
-🐛 Feedback Page Not Working
+404 Error
 
 Check:
 
-1. customer_feedback table exists
-2. feedback page uses the correct db.php
-3. Database host is correct
-4. Database name is correct
-5. created_at exists if the page uses it
-6. id exists if deletion is enabled
-7. Admin session is active
+✓ File name
+✓ Folder name
+✓ Capitalization
+✓ File location
+✓ URL path
 
-🧭 URL Structure
+Database Error
 
-The deployed project follows this structure:
+Check:
 
-https://obr-queue-management.infinityfreeapp.com/
-│
-└── OBR_QMS/
-    │
-    ├── customer/
-    │   └── index.php
-    │
-    └── admin/
-        └── login.php
+✓ Hostname
+✓ Username
+✓ Password
+✓ Database name
+✓ Port
 
-🔗 Direct Links
+Hosted PHP should not normally use:
 
-🌐 Customer
+localhost
+root
 
-https://obr-queue-management.infinityfreeapp.com/OBR_QMS/customer/index.php
+for the online database.
 
-🔐 Admin
+Feedback Page Error
 
-https://obr-queue-management.infinityfreeapp.com/OBR_QMS/admin/login.php
+Make sure the page uses the hosted connection:
 
-📊 System Benefits
+require_once 'db.php';
 
-OBR QMS provides several practical benefits:
+and does not contain an old local connection such as:
 
-Centralized data
+new mysqli("localhost", "root", "", "obr_qms");
 
-Reduced manual work
+Admin Login Works but Dashboard Fails
 
-Better organization
+Check:
 
-Faster information retrieval
+Session creation.
 
-Dedicated customer interface
+$_SESSION['admin_id'].
 
-Dedicated admin interface
+Dashboard session protection.
 
-Digital feedback management
+Database/table names.
 
-Secure administrator authentication
+Correct db.php.
 
-Online accessibility
+🔄 Development Workflow
 
-Expandable architecture
-
-📈 Future Enhancements
-
-The architecture can be expanded with additional functionality.
-
-Potential future features include:
-
-🎫 Automatic queue number generation
-
-📺 Live queue display
-
-⏱️ Estimated waiting time
-
-🔔 Customer notifications
-
-📱 SMS notifications
-
-📧 Email notifications
-
-🔳 QR-code queue tickets
-
-📊 Admin analytics
-
-📈 Queue statistics
-
-📋 Reports
-
-📄 PDF reports
-
-📊 Excel exports
-
-🔎 Advanced search
-
-🧰 Advanced filtering
-
-👥 Multiple administrator roles
-
-📝 Audit logs
-
-🔐 Two-factor authentication
-
-🌐 REST API
-
-📱 Progressive Web App
-
-☁️ Improved cloud deployment
-
-👨‍💻 Development Workflow
-
-The project development process can be summarized as:
-
-Requirement Analysis
-        │
-        ▼
-System Planning
-        │
-        ▼
-Architecture Design
-        │
-        ▼
-Database Design
-        │
-        ▼
-Frontend Development
-        │
-        ▼
-Backend Development
-        │
-        ▼
-Authentication
-        │
-        ▼
-Database Integration
-        │
-        ▼
-CRUD Development
-        │
-        ▼
-Testing
-        │
-        ▼
-Bug Fixing
-        │
-        ▼
-Deployment
-        │
-        ▼
-Live Testing
-        │
-        ▼
-Maintenance
-
-🧠 Development Principles
-
-The project follows several practical development principles:
-
-Separation of Concerns
-
-Customer and administrator functionality are kept in separate
-directories.
-
-Reusable Database Connection
-
-Database connection logic is kept inside db.php rather than
-duplicated unnecessarily across pages.
-
-Session Protection
-
-Administrative pages use sessions to control access.
-
-Server-Side Processing
-
-Sensitive database operations are performed by PHP on the server.
-
-Database-Driven Architecture
-
-Persistent records are stored in MySQL rather than depending only on
-browser-side storage.
-
-🧩 Why PHP + MySQL?
-
-PHP and MySQL provide a practical stack for this type of application.
-
-PHP provides:
-
-Server-side processing
-
-Form handling
-
-Session management
-
-Database integration
-
-Dynamic page generation
-
-MySQL provides:
-
-Structured storage
-
-Relational data
-
-SQL queries
-
-Persistent records
-
-CRUD functionality
-
-Together they provide the foundation for a complete dynamic web
-application.
-
-📦 Deployment Architecture
-
-The production architecture is:
-
-                       INTERNET
-                           │
-                           ▼
-              ┌───────────────────────┐
-              │     InfinityFree      │
-              │       Hosting         │
-              └───────────┬───────────┘
-                          │
-             ┌────────────┴────────────┐
-             │                         │
-             ▼                         ▼
-       Customer PHP               Admin PHP
-             │                         │
-             └────────────┬────────────┘
-                          │
-                          ▼
-                   Remote MySQL
-                          │
-                          ▼
-                Application Database
-
-🧪 Quality Checklist
-
-Before considering a deployment complete:
-
-[✓] Customer URL opens
-[✓] Admin URL opens
-[✓] PHP is working
-[✓] Database is created
-[✓] Database connection works
-[✓] Customer interface works
-[✓] Admin login works
-[✓] Session protection works
-[✓] Dashboard works
-[✓] Feedback page works
-[✓] Feedback data is stored
-[✓] Feedback data is displayed
-[✓] Delete operation works
-[✓] Logout works
-[✓] Responsive layout checked
-[✓] Production URLs checked
-
-📚 Learning Outcomes
-
-Development of OBR QMS provides practical experience in:
-
-Web application development
-
-PHP programming
-
-MySQL database management
-
-SQL queries
-
-CRUD operations
-
-Authentication
-
-Session management
-
-Form processing
-
-Server-side programming
-
-HTML5
-
-CSS3
-
+Requirements
+    ↓
+UI Design
+    ↓
+HTML / CSS
+    ↓
 JavaScript
-
-Responsive web design
-
-Database connectivity
-
-Web hosting
-
-Deployment
-
+    ↓
+PHP Backend
+    ↓
+MySQL Database
+    ↓
+Local Testing
+    ↓
 Debugging
-
-Project architecture
-
-🎓 Academic / Portfolio Value
-
-OBR QMS demonstrates the development of a complete
-database-driven web application.
-
-The project can demonstrate knowledge of:
-
-Frontend
-   +
-Backend
-   +
-Database
-   +
-Authentication
-   +
-CRUD
-   +
+    ↓
+Hosting Configuration
+    ↓
 Deployment
+    ↓
+Live Testing
 
-This makes the project suitable for:
+🚀 Future Enhancements
 
-Academic demonstration
+🎫 Automatic queue ticket generation.
 
-Software engineering coursework
+📺 Live queue display.
 
-Portfolio presentation
+🔔 Customer notifications.
 
-Web development practice
+📊 Admin analytics.
 
-PHP/MySQL learning
+👥 Multiple admin roles.
 
-Database project demonstration
+🔎 Advanced search/filtering.
 
-🏁 Project Status
+📅 Queue history.
 
-<div align="center">
+📤 PDF/Excel reports.
 
-🚀 LIVE & DEPLOYED
+🔐 Stronger authentication.
 
-Customer Portal
+⚡ AJAX live queue updates.
 
-Open Customer Website
+📱 Progressive Web App support.
 
-Admin Portal
+🎓 Project Skills Demonstrated
 
-Open Admin Website
-
-</div>
-
-📌 Important Notes
-
-The customer and admin portals are separate URLs.
-
-The admin portal should not be treated as a public customer page.
-
-Both portals can communicate with the same MySQL database.
-
-Production db.php must contain valid hosting database settings.
-
-Database credentials must remain private.
-
-SQL files should be imported into the correct database.
-
-File and folder names must match their URLs exactly.
-
-PHP pages require a PHP-capable web server.
-
-MySQL-connected pages require a working database connection.
-
-Protected admin pages require a valid admin session.
-
-🔒 Production Security Checklist
-
-Before publishing a production version:
-
-[ ] Remove test/debug pages
-[ ] Remove exposed passwords
-[ ] Do not publish database credentials
-[ ] Use password hashes
-[ ] Validate form input
-[ ] Use prepared SQL statements
-[ ] Escape database output
-[ ] Protect admin routes
-[ ] Test logout
-[ ] Review file permissions
-[ ] Review database permissions
-[ ] Remove unnecessary sensitive files
-
-🤝 Contribution
-
-For future development:
-
-Create a new branch.
-
-Implement the feature.
-
-Test locally.
-
-Verify database operations.
-
-Test customer and admin flows.
-
-Review security implications.
-
-Commit the changes.
-
-Deploy only after successful testing.
-
-📝 Versioning
-
-A simple versioning approach can be used:
-
-v1.0.0
+PHP
 │
-├── 1 = Major release
-├── 0 = Minor release
-└── 0 = Patch
-
-Example future releases:
-
-v1.0.0  Initial deployed system
-v1.1.0  Additional queue functionality
-v1.2.0  Improved admin analytics
-v2.0.0  Major architecture enhancement
-
-📄 License
-
-This project is developed as a software engineering project by
-Saqib Anwar.
-
-Unless otherwise specified, the project source code, interface
-design, documentation, and custom implementation should be treated
-as project-owned work.
-
-Third-party libraries, services, hosting platforms, icons, fonts,
-or other external resources remain subject to their respective
-licenses and terms.
+├── Sessions
+├── Forms
+├── Authentication
+├── CRUD
+└── Server-side processing
+MySQL
+│
+├── Tables
+├── Queries
+├── Relationships
+└── Persistent storage
+Frontend
+│
+├── HTML5
+├── CSS3
+├── Responsive Design
+└── JavaScript
+Deployment
+│
+├── InfinityFree
+├── phpMyAdmin
+├── File Manager
+└── Production debugging
 
 👨‍💻 Developer
 
-<div align="center">
-
 Saqib Anwar
 
-Software Engineering Student | Web Developer | PHP & MySQL Developer
-
-OBR Queue Management System
-
-</div>
-
-⭐ Final Summary
-
-OBR Queue Management System is a complete web-based application
-built around a simple and expandable architecture.
-
-The system separates:
-
-CUSTOMER
-   │
-   ▼
-Customer Portal
-   │
-   ▼
-PHP Backend
-   │
-   ▼
-MySQL
-   ▲
-   │
-PHP Backend
-   ▲
-   │
-Admin Portal
-   ▲
-   │
-ADMIN
-
-The customer portal provides the public-facing experience, while
-the admin portal provides protected management functionality.
-
-The application uses PHP for server-side logic, MySQL for persistent
-data storage, HTML/CSS/JavaScript for the interface, PHP sessions
-for administrator authentication, and InfinityFree for live
-deployment.
+📄 License
 
 <div align="center">
 
-🚀 OBR QMS
+📋 OBR QMS
 
-Organize • Manage • Improve
+Digital Queue Management • Customer Interaction • Administration
 
-Customer Portal:
-https://obr-queue-management.infinityfreeapp.com/OBR_QMS/customer/index.php
+Built with 💻 PHP + 🗄️ MySQL + 🎨 HTML/CSS/JavaScript
 
-Admin Portal:
-https://obr-queue-management.infinityfreeapp.com/OBR_QMS/admin/login.php
+⭐ OBR Queue Management System ⭐
 
-<br>
-
-Built with 💻 by Saqib Anwar
-
-</div
+</div>
